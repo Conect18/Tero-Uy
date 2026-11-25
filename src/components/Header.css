@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-marca { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.header-logo { width: 36px; height: 36px; object-fit: contain; flex-shrink: 0; }
+.header-nombre { font-size: 17px; font-weight: 700; line-height: 1.1; }
+.header-lema { font-size: 12px; color: var(--texto-sec); }
+.header-salir { padding: 9px 12px; font-size: 13px; flex-shrink: 0; }

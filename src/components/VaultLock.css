@@ -1,0 +1,12 @@
+.boveda {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 24px 20px;
+  max-width: 440px;
+  margin: 24px auto;
+}
+.boveda-titulo { font-size: 19px; margin-bottom: 8px; }
+.boveda-texto { font-size: 14px; color: var(--texto-sec); margin-bottom: 18px; line-height: 1.5; }
+.boveda-boton { width: 100%; }
+.boveda-nota { font-size: 12px; color: var(--texto-sec); margin-top: 16px; line-height: 1.5; }

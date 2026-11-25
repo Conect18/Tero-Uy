@@ -1,0 +1,20 @@
+.toast {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 60;
+}
+.toast-exito { background: var(--exito-fondo); color: var(--exito); }
+.toast-error { background: var(--error-fondo); color: var(--error); }
+.toast button { border: none; background: transparent; font-size: 20px; line-height: 1; color: inherit; }

@@ -1,0 +1,12 @@
+.confirmar {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  padding: 22px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+.confirmar-titulo { font-size: 17px; margin-bottom: 8px; }
+.confirmar-mensaje { font-size: 14px; color: var(--texto-sec); line-height: 1.5; margin-bottom: 20px; overflow-wrap: anywhere; }
+.confirmar-acciones { display: flex; gap: 10px; }
+.confirmar-acciones .btn { flex: 1; }
