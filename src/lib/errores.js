@@ -21,6 +21,15 @@ const LOCALES = {
 export function traducirError(error) {
   if (!error) return 'Ocurrió un error inesperado.'
   if (LOCALES[error.message]) return LOCALES[error.message]
+  if (error.code === '42501') {
+    return [
+      MENSAJES['42501'],
+      `Código: ${error.code}`,
+      `Mensaje: ${error.message || 'No disponible'}`,
+      `Detalles: ${error.details || 'Sin detalles'}`,
+      `Sugerencia: ${error.hint || 'Sin sugerencias'}`
+    ].join(' | ')
+  }
   if (error.code && MENSAJES[error.code]) return MENSAJES[error.code]
   if (error.message) {
     const clave = Object.keys(MENSAJES).find((k) => error.message.includes(k))
