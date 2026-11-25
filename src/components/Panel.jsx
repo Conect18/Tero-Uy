@@ -134,7 +134,23 @@ export default function Panel({ usuario, master, onDesbloquear, onCerrarSesion }
       setModalAbierto(false)
       setEnEdicion(null)
     } catch (error) {
-      setErrorForm(traducirError(error))
+      console.error('ERROR REAL AL GUARDAR:', {
+        code: error?.code,
+        message: error?.message,
+        details: error?.details,
+        hint: error?.hint,
+        status: error?.status
+      })
+
+      const diagnostico = [
+        traducirError(error),
+        `Código: ${error?.code ?? 'No disponible'}`,
+        `Mensaje: ${error?.message ?? 'No disponible'}`,
+        `Detalles: ${error?.details ?? 'Sin detalles'}`,
+        `Sugerencia: ${error?.hint ?? 'Sin sugerencias'}`
+      ].join(' | ')
+
+      setErrorForm(diagnostico)
     } finally {
       if (montado.current) setGuardando(false)
     }
