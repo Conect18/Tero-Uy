@@ -122,7 +122,7 @@ export default function CuentaForm({
             </label>
             <input
               id="clave"
-              type="text"
+              type="password"
               autoComplete="off"
               value={datos.clave}
               onChange={(e) => cambiar('clave', e.target.value)}
